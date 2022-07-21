@@ -1,0 +1,27 @@
+<div id="div1">
+    <!-- <button type="button" class="btn btn-dark mr-1">
+        Thêm mới
+    </button> -->
+    <label>Phòng ban</label>
+    <!-- <input class="form-control" [(ngModel)]="phongban" /> -->
+    <div>
+        <select class="form-control" [(ngModel)]="phongban">
+            <option>---Chọn phòng ban ---</option>
+            <option *ngFor="let pban of DSPhongBan">{{pban.tenPhongBan}}</option>
+            
+        </select>
+    </div>
+    <label>Tên nhân viên</label>
+    <input class="form-control" [(ngModel)]="ten" />
+    <label>Ngày sinh</label>
+    <input class="form-control" [(ngModel)]="ngaysinh" />
+    <label>Số điện thoại</label>
+    <input class="form-control" [(ngModel)]="sdt" />
+    <label>G-Mail</label>
+    <input class="form-control" [(ngModel)]="mail" />
+    <label>Chức vụ</label>
+    <input class="form-control" [(ngModel)]="chucvu" />
+    <!-- <label>Mật khẩu</label>
+    <input class="form-control" [(ngModel)]="matKhau" /> -->
+    <button class="btn btn-primary" (click)="suanhanvien()">Sửa</button>
+</div>

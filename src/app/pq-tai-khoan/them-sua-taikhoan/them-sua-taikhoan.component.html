@@ -1,0 +1,18 @@
+<!-- <p>Tạo tài khoản đăng nhập</p> -->
+<div>
+    <!-- <button type="button" class="btn btn-dark mr-1">
+        Thêm mới
+    </button> -->
+    <label>Tên tài khoản</label>
+    <input class="form-control" [(ngModel)]="tenTaiKhoan" />
+    <label>Mật khẩu</label>
+    <input class="form-control" [(ngModel)]="matkhau" />
+    <label>Nhóm quyền</label>
+    <div>
+        <select class="form-control" [(ngModel)]="nhomquyen">
+            <option>---Chọn nhóm quyền---</option>
+            <option *ngFor="let nquyen of DSNhomQuyen">{{nquyen.ten}}</option>
+        </select>
+    </div>
+    <button class="btn btn-primary" (click)="ThemTaiKhoan()">Thêm</button>
+</div>

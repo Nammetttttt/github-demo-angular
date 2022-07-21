@@ -1,0 +1,21 @@
+<div id="div1">
+    <!-- <button type="button" class="btn btn-dark mr-1">
+        Thêm mới
+    </button> -->
+    <label>Nhóm loại</label>
+    <input class="form-control" [(ngModel)]="nhomLoai" />
+    <label>Tên loại</label>
+    <input class="form-control" [(ngModel)]="ten" />
+    <label>Phân loại</label>
+    <div>
+        <select class="form-control" [(ngModel)]="phanLoai">
+            <option>Đồ điện tử</option>
+            <option>Nội thất</option>
+        </select>
+    </div>
+    <label>Mô tả</label>
+    <input class="form-control" [(ngModel)]="moTa" />
+    <!-- <label>Mật khẩu</label>
+    <input class="form-control" [(ngModel)]="matKhau" /> -->
+    <button class="btn btn-primary" (click)="sualoai()">Sửa</button>
+</div>

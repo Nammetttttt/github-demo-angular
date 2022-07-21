@@ -1,0 +1,72 @@
+<!-- <button type="button" class="btn btn-primary" id="div1" data-toggle="modal" data-target="#myModal">
+    Thêm mới
+</button> -->
+
+
+<!-- The Modal -->
+<!-- <div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            
+            <div class="modal-header">
+                <h4 class="modal-title">Thêm mới nhóm quyền chức năng</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            
+            <div class="modal-body">
+                <app-them-sua-nhomquyencn></app-them-sua-nhomquyencn>
+            </div>
+
+
+        </div>
+    </div>
+</div> -->
+<table class="table table-striped">
+    <thead>
+        <th>STT</th>
+        <!-- <th>Mã </th> -->
+        <th>Tên nhóm quyền</th>
+        <th>Chức năng</th>
+        <th></th>
+        <!-- <th>Ngày khởi tạo</th>
+        <th>Tài khoản khởi tạo</th>
+        <th>Ngày chỉnh sửa</th>
+        <th>Tài khoản chỉnh sửa</th>
+        <th>Xóa</th>
+        <th>Tùy chọn</th> -->
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let nHomquyen_cn of DSNhomQuyen_CN; let b = index">
+            <td scope="row">{{b}}</td>
+            <!-- <td>{{nHomquyen_cn.id_NQ}}</td> -->
+
+            <td>{{nHomquyen_cn.ten}}</td>
+            <td>{{nHomquyen_cn.moTa}}</td>
+            <td>
+                <button type="button" class="btn btn-dark mr-1" (click)="xoaNhomquyencn(nHomquyen_cn)">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                        <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                      </svg>
+                    
+                </button>
+            </td>
+            <!-- <td>{{nHomquyen_cn.ngayKhoiTao}}</td>
+            <td>{{nHomquyen_cn.tkKhoiTao}}</td>
+            <td>{{nHomquyen_cn.ngayChinhSuaGanNhat}}</td>
+            <td>{{nHomquyen_cn.tkChinhSua}}</td>
+            <td>{{nHomquyen_cn.mucDaXoa}}</td> -->
+            <!-- <td>
+                <button type="button" class="btn btn-dark mr-1">
+                    Sửa
+                </button>
+                <button type="button" class="btn btn-dark mr-1">
+                    Xóa
+                </button>
+            </td> -->
+        </tr>
+    </tbody>
+
+</table>

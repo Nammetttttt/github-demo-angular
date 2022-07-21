@@ -1,0 +1,56 @@
+<div>
+    <!-- <button type="button" class="btn btn-dark mr-1">
+        Thêm mới
+    </button> -->
+    <label>Số phiếu xuất</label>
+    <input class="form-control" [(ngModel)]="sophieuxuat" />
+    <label>Ngày xuất</label><br>
+    <input type="date" id="birthday" name="birthday" [(ngModel)]="ngayxuat">
+    <br>
+    <!-- <input class="form-control" [(ngModel)]="ngayxuat" /> -->
+    <label>Vị trí sử dụng</label>
+    <!-- <input class="form-control" [(ngModel)]="vitrisudung" /> -->
+    <div>
+        <select class="form-control" [(ngModel)]="vitrisudung">
+            <option >Phòng ban</option>
+            <option >Nhân viên</option>
+        </select>
+    </div>
+    <label>Phòng sử dụng</label>
+    <div>
+        <select class="form-control" [(ngModel)]="idphongban">
+            <option>---Chọn phòng ban ---</option>
+            <option *ngFor="let pban of DSPhongBan">{{pban.tenPhongBan}}</option>
+            <option>Không</option>
+        </select>
+    </div>
+    <!-- <input class="form-control" [(ngModel)]="idphongban" /> -->
+    <label>Nhân viên sử dụng</label>
+    <div>
+        <select class="form-control" [(ngModel)]="idnhanvien">
+            <option>---Chọn nhân viên ---</option>
+            <option *ngFor="let nvien of DSNhanVien">{{nvien.tenNV}}</option>
+            <option>Không</option>
+        </select>
+    </div>
+    <!-- <input class="form-control" [(ngModel)]="idnhanvien" /> -->
+    <label>Kho lưu trữ</label>
+    <div>
+        <select class="form-control" [(ngModel)]="idkho">
+            <option>---Chọn kho lưu trữ---</option>
+            <option *ngFor="let kho of DSKho">{{kho.moTa}}</option>
+        </select>
+    </div>
+    <!-- <input class="form-control" [(ngModel)]="idkho" /> -->
+    <label>Diễn giải</label>
+    <input class="form-control" [(ngModel)]="diengiai" />
+    <label>Chọn tài sản xuất sử dụng</label>
+    <!-- <input class="form-control" [(ngModel)]="taisan" /> -->
+    <div>
+        <select class="form-control" [(ngModel)]="taisan">
+            <option>---Chọn tài sản---</option>
+            <option *ngFor="let khoi of DSTaiSan">{{khoi.tenTS}}</option>
+        </select>
+    </div>
+    <button class="btn btn-primary" (click)="ThemPhieuXuat()">Thêm</button>
+</div>

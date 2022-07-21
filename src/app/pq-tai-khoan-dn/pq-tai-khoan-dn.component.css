@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Numans');
+#div1 {
+    position: relative;
+    right: 530px;
+}
+
+html,
+body {
+    background-image: url('https://i.pinimg.com/originals/6f/a9/c3/6fa9c33211ce7c08f2cc4fcef6144b7d.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 630px;
+}
+
+#bt1 {
+    position: relative;
+    left: 80px;
+    top: 20px;
+}
+
+.h1text {
+    color: rgb(105, 1, 1);
+    text-shadow: 2px 2px 20px rgb(235, 248, 178);
+    position: relative;
+    left: 115px;
+    top: 15px;
+}
+
+#h2DN {
+    position: relative;
+    right: 15px;
+}
+
+#btDN {
+    position: relative;
+    left: 77px;
+}
+
+.container {
+    height: 100%;
+    position: relative;
+    align-content: center;
+    left: 60px;
+}
+
+.card {
+    height: 400px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 280px;
+    background-color: rgba(207, 221, 170, 0.5) !important;
+}
+
+
+/* .input-group-prepend span {
+    width: 50px;
+    background-color: #FFC312;
+    color: black;
+    border: 0 !important;
+} */

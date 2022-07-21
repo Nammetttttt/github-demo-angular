@@ -1,0 +1,37 @@
+<div>
+    <!-- <button type="button" class="btn btn-dark mr-1">
+        Thêm mới
+    </button> -->
+    <label>Số phiếu thu hồi</label>
+    <input class="form-control" [(ngModel)]="sophieuthuhoi" />
+    <label>Ngày thu hồi</label><br>
+    <input type="date" id="birthday" name="birthday" [(ngModel)]="ngaythuhoi">
+    <br>
+    <!-- <input class="form-control" [(ngModel)]="ngaythuhoi" /> -->
+    <label>Nhân viên thu hồi</label>
+    <div>
+        <select class="form-control" [(ngModel)]="idnhanvien">
+            <option>---Chọn nhân viên ---</option>
+            <option *ngFor="let nvien of DSNhanVien">{{nvien.tenNV}}</option>
+        </select>
+    </div>
+    <label>Kho lưu trữ</label>
+    <!-- <input class="form-control" [(ngModel)]="idkho" /> -->
+    <div>
+        <select class="form-control" [(ngModel)]="idkho">
+            <option>---Chọn kho lưu trữ---</option>
+            <option *ngFor="let kho of DSKho">{{kho.moTa}}</option>
+        </select>
+    </div>
+    <label>Diễn giải</label>
+    <input class="form-control" [(ngModel)]="diengiai" />
+    <label>Chọn tài sản thu hồi</label>
+    <!-- <input class="form-control" [(ngModel)]="taisan" /> -->
+    <div>
+        <select class="form-control" [(ngModel)]="taisan">
+            <option>---Chọn tài sản---</option>
+            <option *ngFor="let khoi of DSTaiSan">{{khoi.tenTS}}</option>
+        </select>
+    </div>
+    <button class="btn btn-primary" (click)="ThemPhieuThuHoi()">Thêm</button>
+</div>

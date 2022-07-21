@@ -1,0 +1,18 @@
+<div id="div1">
+    <!-- <button type="button" class="btn btn-dark mr-1">
+        Thêm mới
+    </button> -->
+    <label>Tên tài khoản</label>
+    <input class="form-control" [(ngModel)]="tenTK" />
+    <label>Mật khẩu mới</label>
+    <input class="form-control" [(ngModel)]="matKhau" />
+    <!-- <label>Mật khẩu</label>
+    <input class="form-control" [(ngModel)]="matKhau" /> -->
+    <label>Chọn nhóm quyền</label>
+    <div>
+        <select class="form-control" [(ngModel)]="ten">
+            <option *ngFor="let nquyen of DSNhomQuyen">{{nquyen.ten}}</option>
+        </select>
+    </div>
+    <button class="btn btn-primary" (click)="suataikhoan()">Sửa</button>
+</div>

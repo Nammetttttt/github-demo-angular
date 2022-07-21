@@ -1,0 +1,55 @@
+<!-- <button type="button" class="btn btn-primary" id="div1" data-toggle="modal" data-target="#myModal">
+    Thêm mới
+</button> -->
+
+
+<!-- The Modal -->
+<!-- <div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Thêm mới nhóm quyền tài khoản</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <app-them-sua-nhomquyentk></app-them-sua-nhomquyentk>
+            </div>
+        </div>
+    </div>
+</div> -->
+<table class="table table-striped">
+    <thead>
+        <th>STT</th>
+        <!-- <th>Mã </th> -->
+        <th>Tên tài khoản</th>
+        <th>Tên nhóm quyền</th>
+        <!-- <th>Ngày khởi tạo</th>
+        <th>Tài khoản khởi tạo</th>
+        <th>Ngày chỉnh sửa</th>
+        <th>Tài khoản chỉnh sửa</th>
+        <th>Xóa</th>
+        <th>Tùy chọn</th> -->
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let nHomquyen_tk of DSNhomQuyen_TK; let b = index">
+            <td scope="row">{{b}}</td>
+            <!-- <td>{{nHomquyen_tk.id_NQ}}</td> -->
+            <td>{{nHomquyen_tk.tenTK}}</td>
+            <td>{{nHomquyen_tk.ten}}</td>
+            <!-- <td>{{nHomquyen_tk.ngayKhoiTao}}</td>
+            <td>{{nHomquyen_tk.tkKhoiTao}}</td>
+            <td>{{nHomquyen_tk.ngayChinhSuaGanNhat}}</td>
+            <td>{{nHomquyen_tk.tkChinhSua}}</td>
+            <td>{{nHomquyen_tk.mucDaXoa}}</td> -->
+            <!-- <td>
+                <button type="button" class="btn btn-dark mr-1">
+                    Sửa
+                </button>
+                <button type="button" class="btn btn-dark mr-1">
+                    Xóa
+                </button>
+            </td> -->
+        </tr>
+    </tbody>
+</table>

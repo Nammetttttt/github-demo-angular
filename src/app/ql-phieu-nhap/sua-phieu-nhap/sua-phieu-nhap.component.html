@@ -1,0 +1,35 @@
+<div id="div1">
+    <!-- <button type="button" class="btn btn-dark mr-1">
+        Thêm mới
+    </button> -->
+    <label>Số phiếu nhập</label>
+    <input class="form-control" [(ngModel)]="sophieunhap" />
+    <label>Ngày nhập</label>
+    <input class="form-control" [(ngModel)]="ngaynhap" />
+    <label>Nhân viên nhập</label>
+    <!-- <input class="form-control" [(ngModel)]="nhanvien" /> -->
+    <div>
+        <select class="form-control" [(ngModel)]="nhanvien">
+            <option *ngFor="let nvien of DSNhanVien">{{nvien.tenNV}}</option>
+        </select>
+    </div>
+    <label>Tài khoản nhập</label>
+    <!-- <input class="form-control" [(ngModel)]="taikhoan" /> -->
+    <div>
+        <select class="form-control" [(ngModel)]="taikhoan">
+            <option *ngFor="let tkhoan of DSTaiKhoan">{{tkhoan.tenTK}}</option>
+        </select>
+    </div>
+    <label>Kho</label>
+    <!-- <input class="form-control" [(ngModel)]="kho" /> -->
+    <div>
+        <select class="form-control" [(ngModel)]="kho">
+            <option *ngFor="let kho of DSKho">{{kho.moTa}}</option>
+        </select>
+    </div>
+    <label>Diễn giải</label>
+    <input class="form-control" [(ngModel)]="diengiai" />
+    <!-- <label>Mật khẩu</label>
+    <input class="form-control" [(ngModel)]="matKhau" /> -->
+    <button class="btn btn-primary" (click)="suaphieunhap()">Sửa</button>
+</div>

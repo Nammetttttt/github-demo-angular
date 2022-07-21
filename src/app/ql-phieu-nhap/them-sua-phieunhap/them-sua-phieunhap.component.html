@@ -1,0 +1,66 @@
+<html>
+
+<body>
+    <div>
+        <!-- <button type="button" class="btn btn-dark mr-1">
+        Thêm mới
+    </button> -->
+        <label>Số phiếu nhập</label>
+        <input class="form-control" [(ngModel)]="sophieunhap" />
+        <label>Ngày nhập </label><br>
+        <!-- <input class="form-control" [(ngModel)]="ngaynhap" /> -->
+
+        <input type="date" id="birthday" name="birthday" [(ngModel)]="ngaynhap">
+        <br>
+        <label>Nhân viên nhập</label>
+        <div>
+            <select class="form-control" [(ngModel)]="idnhanvien">
+                <option>---Chọn nhân viên nhập---</option>
+                <option *ngFor="let nvien of DSNhanVien">{{nvien.tenNV}}</option>
+            </select>
+        </div>
+        <!-- <input class="form-control" [(ngModel)]="idnhanvien" /> -->
+        <label>tài khoản nhập</label>
+        <div>
+            <select class="form-control" [(ngModel)]="idtaikhoan">
+                <option>---Chọn tài khoản nhập---</option>
+                <option *ngFor="let tkhoan of DSTaiKhoan">{{tkhoan.tenTK}}</option>
+            </select>
+        </div>
+        <!-- <input class="form-control" [(ngModel)]="idtaikhoan" /> -->
+        <label>Kho lưu trữ</label>
+        <div>
+            <select class="form-control" [(ngModel)]="idkho">
+                <option>---Chọn kho lưu trữ---</option>
+                <option *ngFor="let kho of DSKho">{{kho.moTa}}</option>
+            </select>
+        </div>
+        <!-- <input class="form-control" [(ngModel)]="idkho" /> -->
+        <label>Diễn giải</label>
+        <input class="form-control" [(ngModel)]="diengiai" />
+        <div class="row">
+            <div class="col-sm-6"><button class="btn btn-primary" (click)="ThemPhieuNhap()" data-toggle="modal" data-target="#myModal3">Thêm</button></div>
+            <div class="col-sm-6">
+                <div class="modal" id="myModal3">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+
+                            <!-- Modal Header -->
+                            <div class="modal-header">
+                                <h4 class="modal-title">Thêm tài sản vào phiếu nhập</h4>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body">
+                                <app-them-sua-taisan></app-them-sua-taisan>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

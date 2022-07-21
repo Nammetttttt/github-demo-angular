@@ -1,0 +1,39 @@
+<app-them-sua-phieuthanhlychitiet></app-them-sua-phieuthanhlychitiet>
+<table class="table table-striped">
+    <thead>
+        <th>STT</th>
+        <!-- <th>Mã </th> -->
+        <th>Số phiếu thanh lý</th>
+        <th>Tên tài sản</th>
+        <!-- <th>Ngày khởi tạo</th>
+        <th>Tài khoản khởi tạo</th>
+        <th>Ngày chỉnh sửa</th>
+        <th>Tài khoản chỉnh sửa</th>
+        <th>Xóa</th>
+        <th>Tùy chọn</th> -->
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let pHieuthanhly_ct of DSPhieuThanhLy_ChiTiet; let b = index">
+            <td scope="row">{{b}}</td>
+            <!-- <td>{{pHieuthanhly_ct.id_NQ}}</td> -->
+            <!-- <td>{{pHieuthanhly_ct.id_PTL}}</td> -->
+            <td>{{pHieuthanhly_ct.soPhieuThanhLy}}</td>
+            <td>{{pHieuthanhly_ct.tenTS}}</td>
+            <!-- <td>{{pHieuthanhly_ct.ngayKhoiTao}}</td>
+            <td>{{pHieuthanhly_ct.tkKhoiTao}}</td>
+            <td>{{pHieuthanhly_ct.ngayChinhSuaGanNhat}}</td>
+            <td>{{pHieuthanhly_ct.tkChinhSua}}</td>
+            <td>{{pHieuthanhly_ct.mucDaXoa}}</td> -->
+            <!-- <td>
+                <button type="button" class="btn btn-dark mr-1">
+                    Sửa
+                </button>
+                <button type="button" class="btn btn-dark mr-1">
+                    Xóa
+                </button>
+
+            </td> -->
+        </tr>
+    </tbody>
+</table>

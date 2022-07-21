@@ -1,0 +1,39 @@
+<div>
+    <!-- <button type="button" class="btn btn-dark mr-1">
+        Thêm mới
+    </button> -->
+    <label>Số phiếu thanh lý</label>
+    <input class="form-control" [(ngModel)]="sophieuthanhly" />
+    <!-- <label>Ngày thanh lý</label>
+    <input class="form-control" [(ngModel)]="ngaythanhly" /> -->
+    <label>Ngày thanh lý </label><br>
+    <input type="date" class="form-control" [(ngModel)]="ngaythanhly">
+    <br>
+    <label>Nhân viên thanh lý</label>
+    <!-- <input class="form-control" [(ngModel)]="idnhanvien" /> -->
+    <div>
+        <select class="form-control" [(ngModel)]="idnhanvien">
+            <option>---Chọn nhân viên ---</option>
+            <option *ngFor="let nvien of DSNhanVien">{{nvien.tenNV}}</option>
+        </select>
+    </div>
+    <label>Kho lưu trữ</label>
+    <!-- <input class="form-control" [(ngModel)]="idkho" /> -->
+    <div>
+        <select class="form-control" [(ngModel)]="idkho">
+            <option>---Chọn kho lưu trữ---</option>
+            <option *ngFor="let kho of DSKho">{{kho.moTa}}</option>
+        </select>
+    </div>
+    <label>Diễn giải</label>
+    <input class="form-control" [(ngModel)]="diengiai" />
+    <label>Chọn tài sản thanh lý</label>
+    <!-- <input class="form-control" [(ngModel)]="taisan" /> -->
+    <div>
+        <select class="form-control" [(ngModel)]="taisan">
+            <option>---Chọn tài sản---</option>
+            <option *ngFor="let khoi of DSTaiSan">{{khoi.tenTS}}</option>
+        </select>
+    </div>
+    <button class="btn btn-primary" (click)="ThemPhieuThanhLy()">Thêm</button>
+</div>

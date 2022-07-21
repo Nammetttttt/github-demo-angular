@@ -1,0 +1,37 @@
+<div>
+    <!-- <button type="button" class="btn btn-dark mr-1">
+        Thêm mới
+    </button> -->
+    <label>Mã tài sản</label>
+    <input class="form-control" [(ngModel)]="mats" />
+    <!-- <label>Số phiếu nhập</label>
+    <input class="form-control" [(ngModel)]="idphieunhap" /> -->
+    <label>Tên tài sản</label>
+    <input class="form-control" [(ngModel)]="ten" />
+    <label>Nhãn hiệu</label>
+    <div>
+        <select class="form-control" [(ngModel)]="idnh">
+            <option>---Chọn tên nhãn hiệu---</option>
+            <option *ngFor="let nquyen of DSNhanHieu">{{nquyen.ten}}</option>
+        </select>
+    </div>
+    <label>Loại</label>
+    <div>
+        <select class="form-control" [(ngModel)]="idloai">
+            <!-- <option>---Chọn phân loại---</option> -->
+            <option>Đồ điện tử</option>
+            <option>Nội thất</option>
+            <!-- <option *ngFor="let nquyen1 of DSLoaiTS">{{nquyen1.phanLoai}}</option> -->
+        </select>
+    </div>
+    <label>Mô tả</label>
+    <input class="form-control" [(ngModel)]="mota" />
+    <label>Model</label>
+    <input class="form-control" [(ngModel)]="model" />
+    <div class="row">
+        <div class="col-sm-6"><button class="btn btn-primary" (click)="ThemTaiSan()">Thêm</button></div>
+        <!-- <div class="col-sm-6"><button class="btn btn-primary" (click)="dong()">Đóng</button></div> -->
+    </div>
+
+
+</div>

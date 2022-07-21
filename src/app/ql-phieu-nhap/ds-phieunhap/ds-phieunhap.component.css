@@ -1,0 +1,11 @@
+#div1 {
+    z-index: 1;
+    left: 1150px;
+    position: relative;
+}
+
+#div2 {
+    z-index: 1;
+    left: 650px;
+    position: relative;
+}
